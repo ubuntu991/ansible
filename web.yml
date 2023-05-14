@@ -1,0 +1,10 @@
+                              
+---
+- hosts: qaserver
+  become: yes
+  ignore_errors: yes
+   tasks:
+     - name: install package 
+       package:
+         name: "{{ item }}"
+
